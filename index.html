@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Não clique aqui!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align:center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      font-size: 16px;
+      margin: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: absolute;
+      background-color: #4CAF50; /* Cor de fundo do botão "Sim" */
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #nao {
+      background-color: #FF5733; /* Cor de fundo do botão "Não" */
+    }
+  </style>
+</head>
+
+<body>
+  <header><h1>Você quer clicar no botão "Não"?</h1></header>
+  <button id="sim">Sim</button>
+  <button id="nao">Não</button>
+
+  <script>
+    var nao = document.getElementById("nao");
+
+    nao.addEventListener("mousemove", function(e) {
+      nao.style.left = Math.floor(Math.random() * (window.innerWidth - nao.clientWidth)) + 'px';
+      nao.style.top = Math.floor(Math.random() * (window.innerHeight - nao.clientHeight)) + 'px';
+    });
+  </script>
+</body>
+
+</html>
