@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      text-align:center;
+      text-align: center;
       height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
@@ -32,11 +32,20 @@
     #nao {
       background-color: #FF5733; /* Cor de fundo do botão "Não" */
     }
+
+    @media screen and (max-width: 600px) {
+      /* Estilos para telas menores que 600 pixels de largura */
+      button {
+        position: static; /* Remover a posição absoluta em telas menores */
+      }
+    }
   </style>
 </head>
 
 <body>
-  <header><h1>Você quer clicar no botão "Não"?</h1></header>
+  <header>
+    <h1>Você quer clicar no botão "Não"?</h1>
+  </header>
   <button id="sim">Sim</button>
   <button id="nao">Não</button>
 
